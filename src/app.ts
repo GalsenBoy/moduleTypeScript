@@ -25,3 +25,13 @@ const tab: string[] = ["Bob", "Eric", "Tamsir", "Bill"];
 for (let iterator of tab) {
     console.log(iterator);
 }
+
+
+/**
+ * 
+ * @param x vitesse horizontale
+ * @param y  vitesse verticale
+ */
+function narrowing(x: number | boolean, y: number | boolean | string) {
+    (x == y) ? "x et y sont de même type" : "X et Y sont de types différents";
+}
