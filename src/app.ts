@@ -18,8 +18,10 @@ const increment = (e: Event) => {
     if (span) {
         span.innerText = i.toString();
     }
-
-
 }
-
 compteur?.addEventListener('click', increment);
+
+const tab: string[] = ["Bob", "Eric", "Tamsir", "Bill"];
+for (let iterator of tab) {
+    console.log(iterator);
+}
