@@ -18,3 +18,7 @@ const increment = (e) => {
     }
 };
 compteur === null || compteur === void 0 ? void 0 : compteur.addEventListener('click', increment);
+const tab = ["Bob", "Eric", "Tamsir", "Bill"];
+for (let iterator of tab) {
+    console.log(iterator);
+}
