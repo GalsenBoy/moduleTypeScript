@@ -30,3 +30,4 @@ for (let iterator of tab) {
 function narrowing(x, y) {
     (x == y) ? "x et y sont de même type" : "X et Y sont de types différents";
 }
+const user = { firstName: "Bilaly", lastName: "Cissokho", age: 24 };

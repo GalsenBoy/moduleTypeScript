@@ -35,3 +35,8 @@ for (let iterator of tab) {
 function narrowing(x: number | boolean, y: number | boolean | string) {
     (x == y) ? "x et y sont de même type" : "X et Y sont de types différents";
 }
+
+//Alias de type
+type User = { firstName: string, lastName: string, age: number };
+
+const user: User = { firstName: "Bilaly", lastName: "Cissokho", age: 24 };
