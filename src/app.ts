@@ -36,7 +36,35 @@ function narrowing(x: number | boolean, y: number | boolean | string) {
     (x == y) ? "x et y sont de même type" : "X et Y sont de types différents";
 }
 
-//Alias de type
+/**********************Alias de type*******************/
 type User = { firstName: string, lastName: string, age: number };
-
 const user: User = { firstName: "Bilaly", lastName: "Cissokho", age: 24 };
+
+type Id = number | string;
+const identifiant: Id = 'GalsenBoy';
+
+type tes<ArgType> = (arg: ArgType) => ArgType;
+
+
+/*********************Générics**************************/
+
+function mystere<ArgType>(arg: ArgType): ArgType {
+    return arg;
+}
+
+const bil = mystere<string>("billy");
+const code = mystere(1234);
+
+function mys<TypeArray>(params: TypeArray[]): TypeArray {
+    return params[0];
+}
+
+const tabMys = mys([1, 2, 4,]);
+const testTab: Array<string | number> = [12, "oiyizod", "ee", 2022];
+
+function consoleSize<Type extends { length: number }>(params: Type): Type {
+    console.log(params.length);
+    return params
+}
+
+const cleSize = consoleSize([12, 12, 'e']);
