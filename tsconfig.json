@@ -4,8 +4,9 @@
         "target": "ES2015",
         "noEmitOnError": false,
         "strict": true,
+        "noUncheckedIndexedAccess": true
     },
     "files": [
-        "src/app.ts",
+        "src/types/app.ts",
     ]
 }

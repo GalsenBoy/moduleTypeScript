@@ -30,3 +30,21 @@ for (let iterator of tab) {
 function narrowing(x, y) {
     (x == y) ? "x et y sont de même type" : "X et Y sont de types différents";
 }
+const user = { firstName: "Bilaly", lastName: "Cissokho", age: 24 };
+const identifiant = 'GalsenBoy';
+/*********************Générics**************************/
+function mystere(arg) {
+    return arg;
+}
+const bil = mystere("billy");
+const code = mystere(1234);
+function mys(params) {
+    return params[0];
+}
+const tabMys = mys([1, 2, 4,]);
+const testTab = [12, "oiyizod", "ee", 2022];
+function consoleSize(params) {
+    console.log(params.length);
+    return params;
+}
+const cleSize = consoleSize([12, 12, 'e']);
