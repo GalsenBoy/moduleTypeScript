@@ -55,11 +55,13 @@ function mystere<ArgType>(arg: ArgType): ArgType {
 const bil = mystere<string>("billy");
 const code = mystere(1234);
 
-function mys<TypeArray>(params: TypeArray[]): TypeArray {
-    return params[0];
-}
+// function mys<TypeArray>(params: TypeArray[]): TypeArray {
+//     if (params[0]) {
+//         return params[0];
+//     }
+// }
 
-const tabMys = mys([1, 2, 4,]);
+// const tabMys = mys([1, 2, 4,]);
 const testTab: Array<string | number> = [12, "oiyizod", "ee", 2022];
 
 function consoleSize<Type extends { length: number }>(params: Type): Type {
@@ -68,3 +70,58 @@ function consoleSize<Type extends { length: number }>(params: Type): Type {
 }
 
 const cleSize = consoleSize([12, 12, 'e']);
+
+
+//Lecture sans modifier le tableau
+
+function reverseTab<T>(params: readonly T[]): T[] {
+    return [...params].reverse();
+}
+
+//Class
+
+class Character {
+    #lastName: string;
+    #firstName: string;
+    #age: number;
+
+    constructor() {
+        this.#lastName = "Cissokho";
+        this.#firstName = "Bilaly";
+        this.#age = 24;
+    }
+    toString(): string {
+        return "Je m'appelle " + this.#firstName + " " + this.#lastName + " et j'ai " + this.#age + " ans"
+    }
+}
+
+const cr = new Character();
+
+
+/*****************Tupple and enum , Unknow************************/
+
+function merge<T extends unknown[], U extends unknown[]>(a: T, b: U): [...T, ...U] {
+    return [...a, ...b]
+}
+
+enum Steps {
+    Paiment = "paiement",
+    Selection = "selection",
+    Achat = "achat",
+}
+
+const step: Steps = Steps.Achat;
+console.log(step)
+
+/**************Utilisation de librairie non typé */
+
+import ScrollReveal from 'scrollreveal'
+
+// const sr = ScrollReveal();
+ScrollReveal.reveal('.image_blockchain', {
+    origin: 'left',
+    rotate: { x: 0, y: 0, z: -55 },
+    scale: 0.5,
+    distance: '100px',
+    duration: 2000,
+});
